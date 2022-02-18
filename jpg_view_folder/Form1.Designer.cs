@@ -74,7 +74,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(44, 137);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1081, 845);
+            this.pictureBox1.Size = new System.Drawing.Size(1081, 652);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -105,7 +105,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(837, 990);
+            this.button3.Location = new System.Drawing.Point(840, 797);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(132, 32);
@@ -125,7 +125,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(41, 990);
+            this.textBox3.Location = new System.Drawing.Point(44, 797);
             this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(788, 22);
