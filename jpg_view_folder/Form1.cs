@@ -28,11 +28,15 @@ namespace jpg_view_folder
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+            openFileDialog1.Filter = "JPEGファイル|*.jpg";
             DialogResult dr = openFileDialog1.ShowDialog();
             if (dr == System.Windows.Forms.DialogResult.OK)
             {
                 //ファイルパスをテキストボックスに入れる
                 textBox1.Text = openFileDialog1.FileName;
+                pictureBox1.Width = int.Parse(textBox5.Text);
+                pictureBox1.Height = int.Parse(textBox6.Text); ;
                 pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
                 pictureBox1.ImageLocation = textBox1.Text;
             }
@@ -121,7 +125,11 @@ namespace jpg_view_folder
         }
 
         public void pict_disp()
+
+
         {
+            pictureBox1.Width = int.Parse(textBox5.Text);
+            pictureBox1.Height = int.Parse(textBox6.Text); ;
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.ImageLocation = textBox2.Text;
 

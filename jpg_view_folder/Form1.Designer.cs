@@ -38,6 +38,10 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,8 +51,8 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(44, 64);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Location = new System.Drawing.Point(44, 77);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(569, 22);
             this.textBox1.TabIndex = 0;
@@ -57,7 +61,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(41, 15);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(178, 36);
             this.button1.TabIndex = 1;
@@ -68,9 +72,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(44, 137);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1081, 653);
+            this.pictureBox1.Size = new System.Drawing.Size(1081, 845);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -79,7 +83,7 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(865, 26);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(336, 35);
             this.button2.TabIndex = 3;
@@ -93,7 +97,7 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 15;
             this.listBox1.Location = new System.Drawing.Point(1133, 95);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(4);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(358, 694);
             this.listBox1.TabIndex = 4;
@@ -101,8 +105,8 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(854, 798);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Location = new System.Drawing.Point(837, 990);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(132, 32);
             this.button3.TabIndex = 5;
@@ -113,7 +117,7 @@
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(44, 95);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(569, 22);
             this.textBox2.TabIndex = 6;
@@ -121,26 +125,64 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(44, 798);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox3.Location = new System.Drawing.Point(41, 990);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(788, 22);
             this.textBox3.TabIndex = 7;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(48, 867);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox4.Location = new System.Drawing.Point(23, 1020);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(784, 22);
             this.textBox4.TabIndex = 7;
             this.textBox4.Visible = false;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(310, 12);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(95, 22);
+            this.textBox5.TabIndex = 8;
+            this.textBox5.Text = "500";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(310, 39);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(95, 22);
+            this.textBox6.TabIndex = 9;
+            this.textBox6.Text = "500";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(245, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 15);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "size X";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(245, 40);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 15);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "size Y";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1607, 1055);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
@@ -150,7 +192,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "メモメモjpg";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -171,6 +213,10 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 
