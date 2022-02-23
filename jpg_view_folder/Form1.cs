@@ -13,8 +13,12 @@ using System.IO;
 
 namespace jpg_view_folder
 {
+
+
     public partial class Form1 : Form
     {
+        int save_x;
+        int save_y;
         public Form1()
         {
             InitializeComponent();
@@ -28,6 +32,8 @@ namespace jpg_view_folder
 
         private void button1_Click(object sender, EventArgs e)
         {
+            save_x = pictureBox1.Width;
+            save_y = pictureBox1.Height;
 
             openFileDialog1.Filter = "JPEGファイル|*.jpg";
             DialogResult dr = openFileDialog1.ShowDialog();
@@ -139,6 +145,44 @@ namespace jpg_view_folder
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Color col;
+            int i, j, nx, ny, r, g, b, aa, bb, cc;
+
+
+
+            Bitmap bmp = new Bitmap(pictureBox1.Image);
+
+            nx = bmp.Width;
+            ny = bmp.Height;
+
+            if (textBox7.Text == "") { aa = 100; textBox7.Text = "100"; }
+            if (textBox8.Text == "") { bb = 100; textBox8.Text = "100"; }
+            if (textBox9.Text == "") { cc = 100; textBox9.Text = "100"; }
+
+            aa = int.Parse(textBox7.Text);
+            bb = int.Parse(textBox8.Text);
+            cc = int.Parse(textBox9.Text);
+            for (j = 0; j < ny; j++)
+            {
+                for (i = 0; i < nx; i++)
+                {
+                    col = bmp.GetPixel(i, j);
+                    r = 255-col.R;
+                    g = 255-col.G;
+                    b = 255-col.B;
+                    bmp.SetPixel(i, j, Color.FromArgb(r, g, b));
+                }
+            }
+
+            //pictureBox2.Width = int.Parse(textBox5.Text);
+            //pictureBox2.Height = int.Parse(textBox6.Text); ;
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.Image = bmp;
+        }
+
     }
 }
 
