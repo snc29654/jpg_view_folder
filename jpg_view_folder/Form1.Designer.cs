@@ -144,7 +144,7 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(72, 19);
             this.textBox5.TabIndex = 8;
-            this.textBox5.Text = "400";
+            this.textBox5.Text = "300";
             // 
             // textBox6
             // 
