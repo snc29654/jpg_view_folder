@@ -177,12 +177,16 @@ namespace jpg_view_folder
                 }
             }
 
-            //pictureBox2.Width = int.Parse(textBox5.Text);
-            //pictureBox2.Height = int.Parse(textBox6.Text); ;
+            pictureBox2.Width = int.Parse(textBox5.Text);
+            pictureBox2.Height = int.Parse(textBox6.Text); ;
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.Image = bmp;
         }
 
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
