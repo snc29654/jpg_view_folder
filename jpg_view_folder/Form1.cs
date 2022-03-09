@@ -154,7 +154,11 @@ namespace jpg_view_folder
 
         private void button4_Click(object sender, EventArgs e)
         {
-            pictureBox2.Visible = true;
+            try
+            {
+
+
+                pictureBox2.Visible = true;
 
             Color col;
             int i, j, nx, ny, r, g, b, aa, bb, cc;
@@ -189,6 +193,14 @@ namespace jpg_view_folder
             pictureBox2.Height = int.Parse(textBox6.Text); ;
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.Image = bmp;
+
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("写真を表示してください");
+            }
+
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
