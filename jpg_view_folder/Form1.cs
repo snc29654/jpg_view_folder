@@ -69,6 +69,10 @@ namespace jpg_view_folder
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+            pictureBox2.Visible = false;
+
+
             string s = listBox1.Text;
 
             textBox3.Clear();
@@ -150,6 +154,8 @@ namespace jpg_view_folder
 
         private void button4_Click(object sender, EventArgs e)
         {
+            pictureBox2.Visible = true;
+
             Color col;
             int i, j, nx, ny, r, g, b, aa, bb, cc;
 
