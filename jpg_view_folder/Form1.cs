@@ -96,7 +96,9 @@ namespace jpg_view_folder
                     var record = reader.ReadLine();
 
                     textBox3.Text = record;
+
                 }
+                reader.Close();
             }
             catch (Exception)
             {
