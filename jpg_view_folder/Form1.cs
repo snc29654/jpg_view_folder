@@ -69,9 +69,9 @@ namespace jpg_view_folder
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string s = listBox1.Text; 
+            string s = listBox1.Text;
 
-
+            textBox3.Clear();
             textBox2.Text = s;
             pict_disp();
 
@@ -95,7 +95,7 @@ namespace jpg_view_folder
                 {
                     var record = reader.ReadLine();
 
-                    textBox3.Text = record;
+                    textBox3.Text = textBox3.Text + record + "\r\n";
 
                 }
                 reader.Close();
