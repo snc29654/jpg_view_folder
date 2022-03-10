@@ -207,6 +207,32 @@ namespace jpg_view_folder
         {
 
         }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+            listBox1_SelectedIndexChanged(sender, e);
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+            listBox1_SelectedIndexChanged(sender, e);
+
+        }
     }
 }
 

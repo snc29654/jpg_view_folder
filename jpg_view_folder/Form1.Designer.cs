@@ -57,12 +57,13 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(44, 78);
+            this.textBox1.Location = new System.Drawing.Point(80, 929);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(569, 22);
             this.textBox1.TabIndex = 0;
             this.textBox1.Visible = false;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button1
             // 
@@ -77,7 +78,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(80, 148);
+            this.pictureBox1.Location = new System.Drawing.Point(82, 95);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(408, 440);
@@ -111,10 +112,10 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(887, 725);
+            this.button3.Location = new System.Drawing.Point(889, 751);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(132, 32);
+            this.button3.Size = new System.Drawing.Size(132, 30);
             this.button3.TabIndex = 5;
             this.button3.Text = "コメント書き込み";
             this.button3.UseVisualStyleBackColor = true;
@@ -122,21 +123,23 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(44, 95);
+            this.textBox2.Location = new System.Drawing.Point(80, 946);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(569, 22);
             this.textBox2.TabIndex = 6;
             this.textBox2.Visible = false;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(80, 725);
+            this.textBox3.Location = new System.Drawing.Point(82, 751);
             this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(788, 87);
+            this.textBox3.Size = new System.Drawing.Size(788, 85);
             this.textBox3.TabIndex = 7;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // textBox4
             // 
@@ -155,6 +158,7 @@
             this.textBox5.Size = new System.Drawing.Size(95, 22);
             this.textBox5.TabIndex = 8;
             this.textBox5.Text = "300";
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // textBox6
             // 
@@ -164,6 +168,7 @@
             this.textBox6.Size = new System.Drawing.Size(95, 22);
             this.textBox6.TabIndex = 9;
             this.textBox6.Text = "400";
+            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // label1
             // 
@@ -185,7 +190,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(661, 148);
+            this.pictureBox2.Location = new System.Drawing.Point(587, 95);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(384, 440);
@@ -206,7 +211,7 @@
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(724, 78);
+            this.textBox7.Location = new System.Drawing.Point(1161, 65);
             this.textBox7.Margin = new System.Windows.Forms.Padding(4);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(65, 22);
@@ -215,7 +220,7 @@
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(805, 78);
+            this.textBox8.Location = new System.Drawing.Point(1234, 65);
             this.textBox8.Margin = new System.Windows.Forms.Padding(4);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(65, 22);
@@ -224,7 +229,7 @@
             // 
             // textBox9
             // 
-            this.textBox9.Location = new System.Drawing.Point(887, 78);
+            this.textBox9.Location = new System.Drawing.Point(1307, 65);
             this.textBox9.Margin = new System.Windows.Forms.Padding(4);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(65, 22);
@@ -235,7 +240,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1458, 831);
+            this.ClientSize = new System.Drawing.Size(1458, 979);
             this.Controls.Add(this.textBox9);
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.textBox7);
