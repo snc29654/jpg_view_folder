@@ -249,6 +249,19 @@ namespace jpg_view_folder
             listBox1_SelectedIndexChanged(sender, e);
 
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            textBox3.Visible = true;
+            button3.Visible = true;
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            textBox3.Visible = false;
+            button3.Visible = false;
+
+        }
     }
 }
 
