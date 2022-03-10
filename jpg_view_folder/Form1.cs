@@ -17,6 +17,8 @@ namespace jpg_view_folder
 
     public partial class Form1 : Form
     {
+
+        int size_diff = 0;
         int save_x;
         int save_y;
         public Form1()
@@ -140,8 +142,8 @@ namespace jpg_view_folder
 
 
         {
-            pictureBox1.Width = int.Parse(textBox5.Text);
-            pictureBox1.Height = int.Parse(textBox6.Text); ;
+            pictureBox1.Width = int.Parse(textBox5.Text) + size_diff;
+            pictureBox1.Height = int.Parse(textBox6.Text) + size_diff;
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.ImageLocation = textBox2.Text;
 
@@ -230,6 +232,20 @@ namespace jpg_view_folder
 
         private void textBox6_TextChanged(object sender, EventArgs e)
         {
+            listBox1_SelectedIndexChanged(sender, e);
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            size_diff = size_diff + 10;
+            listBox1_SelectedIndexChanged(sender, e);
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            size_diff = size_diff - 10;
             listBox1_SelectedIndexChanged(sender, e);
 
         }
