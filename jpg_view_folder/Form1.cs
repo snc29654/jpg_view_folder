@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System;
 using System.IO;
 
 
@@ -66,7 +65,47 @@ namespace jpg_view_folder
                 s3, "*.jpg", System.IO.SearchOption.AllDirectories);
 
             listBox1.Items.AddRange(files);
+            Writehtml(files);
+        }
+        private void Writehtml(string[] files)
+        {
+            //ファイル名
+            var fileName = @"C:\html_link\test.html";
 
+
+
+            try
+            {
+                //ファイルをオープンする
+                using (StreamWriter sw = new StreamWriter(fileName, false, Encoding.GetEncoding("utf-8")))
+                {
+                    string line;
+                    line = "<!DOCTYPE html>\n"; sw.Write(line);
+                    line = "<html>\n"; sw.Write(line);
+                    line = "<head>\n"; sw.Write(line);
+                    line = "<title> 画像表示 </title>\n"; sw.Write(line);
+                    line = "</head>\n"; sw.Write(line);
+                    line = "<body>\n"; sw.Write(line);
+
+
+                    foreach (var file in files)
+                    {
+
+                        line="<img src="+ file +" width="+textBox10.Text+" height="+textBox11.Text+">\n";
+
+                        //テキストを書き込む
+                        sw.Write(line);
+                    }
+                    line = "</body>\n"; sw.Write(line);
+                    line = "</html>\n"; sw.Write(line);
+
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -260,6 +299,13 @@ namespace jpg_view_folder
         {
             textBox3.Visible = false;
             button3.Visible = false;
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(@"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe",
+                    "C:\\html_link\\test.html");
 
         }
     }

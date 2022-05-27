@@ -51,6 +51,9 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.button9 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -92,7 +95,7 @@
             // 
             this.button2.Location = new System.Drawing.Point(799, -1);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(252, 28);
+            this.button2.Size = new System.Drawing.Size(252, 25);
             this.button2.TabIndex = 3;
             this.button2.Text = "リスト";
             this.button2.UseVisualStyleBackColor = true;
@@ -148,7 +151,7 @@
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(232, 10);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(72, 19);
             this.textBox5.TabIndex = 8;
@@ -158,7 +161,7 @@
             // textBox6
             // 
             this.textBox6.Location = new System.Drawing.Point(232, 31);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(72, 19);
             this.textBox6.TabIndex = 9;
@@ -231,7 +234,7 @@
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(317, 10);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(50, 31);
             this.button5.TabIndex = 17;
@@ -242,7 +245,7 @@
             // button6
             // 
             this.button6.Location = new System.Drawing.Point(372, 10);
-            this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(51, 31);
             this.button6.TabIndex = 18;
@@ -253,7 +256,7 @@
             // button7
             // 
             this.button7.Location = new System.Drawing.Point(434, 10);
-            this.button7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button7.Margin = new System.Windows.Forms.Padding(2);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(80, 29);
             this.button7.TabIndex = 19;
@@ -264,7 +267,7 @@
             // button8
             // 
             this.button8.Location = new System.Drawing.Point(518, 10);
-            this.button8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button8.Margin = new System.Windows.Forms.Padding(2);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(87, 29);
             this.button8.TabIndex = 20;
@@ -272,11 +275,40 @@
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(926, 27);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(54, 19);
+            this.textBox10.TabIndex = 21;
+            this.textBox10.Text = "100";
+            // 
+            // textBox11
+            // 
+            this.textBox11.Location = new System.Drawing.Point(986, 27);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(55, 19);
+            this.textBox11.TabIndex = 22;
+            this.textBox11.Text = "100";
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(805, 26);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(82, 24);
+            this.button9.TabIndex = 23;
+            this.button9.Text = "webサムネイル";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1107, 682);
+            this.Controls.Add(this.button9);
+            this.Controls.Add(this.textBox11);
+            this.Controls.Add(this.textBox10);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
@@ -333,6 +365,9 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.Button button9;
     }
 }
 
