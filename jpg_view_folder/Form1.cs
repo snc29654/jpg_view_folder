@@ -23,12 +23,30 @@ namespace jpg_view_folder
         public Form1()
         {
             InitializeComponent();
+            makedir();
         }
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
         }
         private void Form1_Load(object sender, EventArgs e)
         {
+        }
+
+
+        private void makedir()
+        {
+
+            string path = @"C:\html_link";
+
+            if (Directory.Exists(path))
+            {
+            }
+            else
+            {
+                Directory.CreateDirectory(path);
+                MessageBox.Show("C:html_linkを作成しました");
+            }
+
         }
 
         private void button1_Click(object sender, EventArgs e)
