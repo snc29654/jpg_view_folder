@@ -281,7 +281,7 @@
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(54, 19);
             this.textBox10.TabIndex = 21;
-            this.textBox10.Text = "100";
+            this.textBox10.Text = "50";
             // 
             // textBox11
             // 
@@ -289,7 +289,7 @@
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(55, 19);
             this.textBox11.TabIndex = 22;
-            this.textBox11.Text = "100";
+            this.textBox11.Text = "50";
             // 
             // button9
             // 
