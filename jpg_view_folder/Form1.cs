@@ -20,6 +20,9 @@ namespace jpg_view_folder
         int size_diff = 0;
         int save_x;
         int save_y;
+
+        string[] files;
+
         public Form1()
         {
             InitializeComponent();
@@ -79,11 +82,10 @@ namespace jpg_view_folder
             s3 = System.IO.Path.GetDirectoryName(s);
 
 
-            string[] files = System.IO.Directory.GetFiles(
+            files = System.IO.Directory.GetFiles(
                 s3, "*.jpg", System.IO.SearchOption.AllDirectories);
 
             listBox1.Items.AddRange(files);
-            Writehtml(files);
         }
         private void Writehtml(string[] files)
         {
@@ -322,6 +324,9 @@ namespace jpg_view_folder
 
         private void button9_Click(object sender, EventArgs e)
         {
+
+            Writehtml(files);
+
             System.Diagnostics.Process.Start(@"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe",
                     "C:\\html_link\\test.html");
 

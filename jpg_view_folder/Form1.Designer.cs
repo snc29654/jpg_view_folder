@@ -54,6 +54,8 @@
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.button9 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -277,7 +279,7 @@
             // 
             // textBox10
             // 
-            this.textBox10.Location = new System.Drawing.Point(926, 27);
+            this.textBox10.Location = new System.Drawing.Point(932, 28);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(54, 19);
             this.textBox10.TabIndex = 21;
@@ -285,7 +287,7 @@
             // 
             // textBox11
             // 
-            this.textBox11.Location = new System.Drawing.Point(986, 27);
+            this.textBox11.Location = new System.Drawing.Point(1040, 27);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(55, 19);
             this.textBox11.TabIndex = 22;
@@ -301,11 +303,31 @@
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(894, 31);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(32, 12);
+            this.label3.TabIndex = 24;
+            this.label3.Text = "width";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(999, 31);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(36, 12);
+            this.label4.TabIndex = 25;
+            this.label4.Text = "height";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1107, 682);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.textBox11);
             this.Controls.Add(this.textBox10);
@@ -368,6 +390,8 @@
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
 
