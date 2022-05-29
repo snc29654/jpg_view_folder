@@ -210,7 +210,7 @@ namespace jpg_view_folder
                     line = "}\n"; sw.Write(line);
                     line = "function tm(){\n"; sw.Write(line);
                     line = "document.body.background = img[i];\n"; sw.Write(line);
-                    line = "tm = setInterval(\"change()\",1000);\n"; sw.Write(line);
+                    line = "tm = setInterval(\"change()\"," + textBox12.Text + ");\n"; sw.Write(line);
                     line = "}\n"; sw.Write(line);
                     line = "//-->\n"; sw.Write(line);
                     line = "</script>\n"; sw.Write(line);
