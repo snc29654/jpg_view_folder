@@ -127,6 +127,109 @@ namespace jpg_view_folder
                 MessageBox.Show(ex.Message);
             }
         }
+        private void Writehtml2(string[] files)
+        {
+            //ファイル名
+            var fileName = @"C:\html_link\test2.html";
+
+
+            //書き込むテキスト
+            var days = new string[] {
+"<!DOCTYPE html>",
+"<html>",
+"<head>",
+"<title> 画像表示 </title>",
+"<script language=\"JavaScript\">",
+    "<!--\n",
+    "i = 0;\n",
+    "url = \"C:/jpgtemp/\";\n",
+    "img = new Array(\n",
+        "\"0.jpg\",\n",
+        "\"1.jpg\",\n",
+        "\"2.jpg\",\n",
+        "\"3.jpg\",\n",
+        "\"4.jpg\",\n",
+        "\"5.jpg\",\n",
+        "\"6.jpg\",\n",
+        "\"7.jpg\",\n",
+        "\"8.jpg\",\n",
+        "\"9.jpg\"\n",
+    ");\n",
+    "function change(){\n",
+        "i++;\n",
+        "if(i >= img.length) {\n",
+            "i = 0;\n",
+        "}\n",
+        "document.body.background = url + img[i];\n",
+    "}\n",
+    "function tm(){\n",
+        "document.body.background = url + img[i];\n",
+        "tm = setInterval(\"change()\",1000);\n",
+    "}\n",
+    "//-->\n",
+    "</script>\n",
+"</head>\n",
+"<body onLoad=\"tm()\">\n",
+"<h1>画像表示</h1>\n",
+"</body>\n",
+"</html>\n",
+            };
+
+            try
+            {
+                //ファイルをオープンする
+                using (StreamWriter sw = new StreamWriter(fileName, false, Encoding.GetEncoding("utf-8")))
+                {
+                    string line;
+                    string file_c;
+                    line = "<!DOCTYPE html>"; sw.Write(line);
+
+                    line = "<html>"; sw.Write(line);
+                    line = "<head>"; sw.Write(line);
+                    line = "<title> 画像表示 </title>"; sw.Write(line);
+                    line = "<script language=\"JavaScript\">"; sw.Write(line);
+                    line = "<!--\n"; sw.Write(line);
+                    line = "i = 0;\n"; sw.Write(line);
+                    //line = "url = \"C:/jpgtemp/\";\n"; sw.Write(line);
+                    line = "img = new Array(\n"; sw.Write(line);
+
+                    foreach (var file in files)
+                    {
+                        file_c=file.Replace(@"\", "\\\\");
+
+                        line = "\""+file_c+ "\""+",\n"; sw.Write(line);
+                    }
+
+                    line = ");\n"; sw.Write(line);
+                    line = "function change(){\n"; sw.Write(line);
+                    line = "i++;\n"; sw.Write(line);
+                    line = "if(i >= img.length) {\n"; sw.Write(line);
+                    line = "i = 0;\n"; sw.Write(line);
+                    line = "}\n"; sw.Write(line);
+                    line = "document.body.background = img[i];\n"; sw.Write(line);
+                    line = "}\n"; sw.Write(line);
+                    line = "function tm(){\n"; sw.Write(line);
+                    line = "document.body.background = img[i];\n"; sw.Write(line);
+                    line = "tm = setInterval(\"change()\",1000);\n"; sw.Write(line);
+                    line = "}\n"; sw.Write(line);
+                    line = "//-->\n"; sw.Write(line);
+                    line = "</script>\n"; sw.Write(line);
+                    line = "</head>\n"; sw.Write(line);
+                    line = "<body onLoad=\"tm()\">\n"; sw.Write(line);
+                    line = "<h1>画像表示</h1>\n"; sw.Write(line);
+                    line = "</body>\n"; sw.Write(line);
+                    line = "</html>\n"; sw.Write(line);
+
+
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -329,6 +432,15 @@ namespace jpg_view_folder
 
             System.Diagnostics.Process.Start(@"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe",
                     "C:\\html_link\\test.html");
+
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Writehtml2(files);
+
+            System.Diagnostics.Process.Start(@"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe",
+                    "C:\\html_link\\test2.html");
 
         }
     }

@@ -56,6 +56,7 @@
             this.button9 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.button10 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -295,7 +296,7 @@
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(805, 26);
+            this.button9.Location = new System.Drawing.Point(799, 26);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(82, 24);
             this.button9.TabIndex = 23;
@@ -321,11 +322,22 @@
             this.label4.TabIndex = 25;
             this.label4.Text = "height";
             // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(745, 52);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(97, 24);
+            this.button10.TabIndex = 26;
+            this.button10.Text = "webスライドショー";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1107, 682);
+            this.Controls.Add(this.button10);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button9);
@@ -392,6 +404,7 @@
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button10;
     }
 }
 
