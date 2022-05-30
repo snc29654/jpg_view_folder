@@ -172,7 +172,8 @@ namespace jpg_view_folder
                     {
 
                         line = "<img src=" + file + " width=" + textBox10.Text + " height=" + textBox11.Text + ">\n";
-
+                        sw.Write(line);
+                        line = "<a href ="+ file+ ">▼</a>\n";
                         //テキストを書き込む
                         sw.Write(line);
                     }
