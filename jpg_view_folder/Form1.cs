@@ -87,6 +87,66 @@ namespace jpg_view_folder
 
             listBox1.Items.AddRange(files);
         }
+
+        private void button2_Click_mp4(object sender, EventArgs e)
+        {
+
+
+            string s = textBox1.Text;
+            string s3 = "";
+
+            s3 = System.IO.Path.GetDirectoryName(s);
+
+
+            files = System.IO.Directory.GetFiles(
+                s3, "*.mp4", System.IO.SearchOption.AllDirectories);
+
+            listBox1.Items.AddRange(files);
+        }
+
+
+
+
+        private void Writehtml_mp4(string[] files)
+        {
+            //ファイル名
+            var fileName = @"C:\html_link\test.html";
+
+
+
+            try
+            {
+                //ファイルをオープンする
+                using (StreamWriter sw = new StreamWriter(fileName, false, Encoding.GetEncoding("utf-8")))
+                {
+                    string line;
+                    line = "<!DOCTYPE html>\n"; sw.Write(line);
+                    line = "<html>\n"; sw.Write(line);
+                    line = "<head>\n"; sw.Write(line);
+                    line = "<title> 画像表示 </title>\n"; sw.Write(line);
+                    line = "</head>\n"; sw.Write(line);
+                    line = "<body>\n"; sw.Write(line);
+
+
+                    foreach (var file in files)
+                    {
+                        line = "<video controls src = "+file+" ></video>\n";
+
+                        //テキストを書き込む
+                        sw.Write(line);
+                    }
+                    line = "</body>\n"; sw.Write(line);
+                    line = "</html>\n"; sw.Write(line);
+
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         private void Writehtml(string[] files)
         {
             //ファイル名
@@ -111,7 +171,7 @@ namespace jpg_view_folder
                     foreach (var file in files)
                     {
 
-                        line="<img src="+ file +" width="+textBox10.Text+" height="+textBox11.Text+">\n";
+                        line = "<img src=" + file + " width=" + textBox10.Text + " height=" + textBox11.Text + ">\n";
 
                         //テキストを書き込む
                         sw.Write(line);
@@ -127,6 +187,9 @@ namespace jpg_view_folder
                 MessageBox.Show(ex.Message);
             }
         }
+
+
+
         private void Writehtml2(string[] files)
         {
             //ファイル名
@@ -441,6 +504,36 @@ namespace jpg_view_folder
 
             System.Diagnostics.Process.Start(@"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe",
                     "C:\\html_link\\test2.html");
+
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            save_x = pictureBox1.Width;
+            save_y = pictureBox1.Height;
+
+            openFileDialog1.Filter = "MPEGファイル|*.mp4";
+            DialogResult dr = openFileDialog1.ShowDialog();
+            if (dr == System.Windows.Forms.DialogResult.OK)
+            {
+                //ファイルパスをテキストボックスに入れる
+                textBox1.Text = openFileDialog1.FileName;
+                pictureBox1.Width = int.Parse(textBox5.Text);
+                pictureBox1.Height = int.Parse(textBox6.Text); ;
+                pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+                pictureBox1.ImageLocation = textBox1.Text;
+            }
+            button2_Click_mp4(sender, e);
+
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            Writehtml_mp4(files);
+
+            System.Diagnostics.Process.Start(@"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe",
+                    "C:\\html_link\\test.html");
+
 
         }
     }
