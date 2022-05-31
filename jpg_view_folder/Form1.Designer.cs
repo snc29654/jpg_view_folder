@@ -90,7 +90,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 76);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 91);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(306, 352);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -100,9 +100,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(799, -1);
+            this.button2.Location = new System.Drawing.Point(808, 91);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(252, 25);
+            this.button2.Size = new System.Drawing.Size(73, 25);
             this.button2.TabIndex = 3;
             this.button2.Text = "リスト";
             this.button2.UseVisualStyleBackColor = true;
@@ -113,9 +113,9 @@
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 12;
-            this.listBox1.Location = new System.Drawing.Point(808, 148);
+            this.listBox1.Location = new System.Drawing.Point(808, 124);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(270, 484);
+            this.listBox1.Size = new System.Drawing.Size(270, 508);
             this.listBox1.TabIndex = 4;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -197,7 +197,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(440, 76);
+            this.pictureBox2.Location = new System.Drawing.Point(440, 86);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(288, 352);
             this.pictureBox2.TabIndex = 12;
@@ -284,7 +284,7 @@
             // 
             // textBox10
             // 
-            this.textBox10.Location = new System.Drawing.Point(932, 28);
+            this.textBox10.Location = new System.Drawing.Point(932, 12);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(54, 19);
             this.textBox10.TabIndex = 21;
@@ -292,7 +292,7 @@
             // 
             // textBox11
             // 
-            this.textBox11.Location = new System.Drawing.Point(1040, 27);
+            this.textBox11.Location = new System.Drawing.Point(1041, 12);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(55, 19);
             this.textBox11.TabIndex = 22;
@@ -300,18 +300,18 @@
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(799, 26);
+            this.button9.Location = new System.Drawing.Point(759, 12);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(82, 24);
             this.button9.TabIndex = 23;
-            this.button9.Text = "webサムネイル";
+            this.button9.Text = "jpgサムネイル";
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(894, 31);
+            this.label3.Location = new System.Drawing.Point(883, 16);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(32, 12);
             this.label3.TabIndex = 24;
@@ -320,7 +320,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(999, 31);
+            this.label4.Location = new System.Drawing.Point(999, 15);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(36, 12);
             this.label4.TabIndex = 25;
@@ -328,17 +328,17 @@
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(799, 86);
+            this.button10.Location = new System.Drawing.Point(759, 39);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(97, 24);
             this.button10.TabIndex = 26;
-            this.button10.Text = "webスライドショー";
+            this.button10.Text = "jpgスライドショー";
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // textBox12
             // 
-            this.textBox12.Location = new System.Drawing.Point(959, 88);
+            this.textBox12.Location = new System.Drawing.Point(932, 42);
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(45, 19);
             this.textBox12.TabIndex = 27;
@@ -347,7 +347,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(907, 91);
+            this.label5.Location = new System.Drawing.Point(883, 45);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(43, 12);
             this.label5.TabIndex = 28;
@@ -355,7 +355,7 @@
             // 
             // button11
             // 
-            this.button11.Location = new System.Drawing.Point(32, 43);
+            this.button11.Location = new System.Drawing.Point(32, 54);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(133, 27);
             this.button11.TabIndex = 29;
@@ -365,9 +365,9 @@
             // 
             // button12
             // 
-            this.button12.Location = new System.Drawing.Point(799, 56);
+            this.button12.Location = new System.Drawing.Point(171, 54);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(97, 19);
+            this.button12.Size = new System.Drawing.Size(97, 26);
             this.button12.TabIndex = 30;
             this.button12.Text = "mp4サムネイル";
             this.button12.UseVisualStyleBackColor = true;
