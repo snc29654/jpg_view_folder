@@ -131,6 +131,8 @@ namespace jpg_view_folder
                     foreach (var file in files)
                     {
                         line = "<video controls src = "+file+" ></video>\n";
+                        sw.Write(line);
+                        line = "<a href =" + file + ">▼</a>\n";
 
                         //テキストを書き込む
                         sw.Write(line);
