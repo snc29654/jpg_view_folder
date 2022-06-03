@@ -132,7 +132,7 @@ namespace jpg_view_folder
                     {
                         line = "<video controls width="+textBox13.Text+" src = "+file+" ></video>\n";
                         sw.Write(line);
-                        line = "<a href =" + file + ">▼</a>\n";
+                        line = "<a href =" + file + " target = \"_blank\"" + ">▼</a>\n";
 
                         //テキストを書き込む
                         sw.Write(line);
