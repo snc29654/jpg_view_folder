@@ -297,6 +297,134 @@ namespace jpg_view_folder
         }
 
 
+        private void Writehtml3(string[] files)
+        {
+            //ファイル名
+            var fileName = @"C:\html_link\test3.html";
+
+
+            //書き込むテキスト
+            /*
+            <!DOCTYPE html>
+            <html>
+            <head>
+            <title> 画像表示 </title>
+            </head>
+            <body>
+            <img id="pic" src= "" width="30%" height="30%">
+
+            <script>
+
+            const img = [
+            "C:\\jpg_folder\\風景\\P1000486.JPG",
+            "C:\\jpg_folder\\風景\\P1000487.JPG",
+            "C:\\jpg_folder\\風景\\P1000488.JPG",
+            "C:\\jpg_folder\\風景\\P1000489.JPG",
+            "C:\\jpg_folder\\風景\\P1000490.JPG",
+            "C:\\jpg_folder\\風景\\P1000491.JPG",
+            "C:\\jpg_folder\\風景\\P1000492.JPG",
+            "C:\\jpg_folder\\風景\\P1000493.JPG",
+            "C:\\jpg_folder\\風景\\P1000494.JPG",
+            "C:\\jpg_folder\\風景\\P1000495.JPG",
+            "C:\\jpg_folder\\風景\\P1000496.JPG",
+            "C:\\jpg_folder\\風景\\P1000497.JPG",
+            "C:\\jpg_folder\\風景\\P1000498.JPG",
+            "C:\\jpg_folder\\風景\\P1000499.JPG",
+            "C:\\jpg_folder\\風景\\P1000500.JPG",
+            "C:\\jpg_folder\\風景\\P1000501.JPG",
+            "C:\\jpg_folder\\風景\\P1000502.JPG",
+            "C:\\jpg_folder\\風景\\P1000503.JPG",
+            "C:\\jpg_folder\\風景\\P1000504.JPG",
+            "C:\\jpg_folder\\風景\\P1000505.JPG",
+            "C:\\jpg_folder\\風景\\P1000506.JPG",
+            "C:\\jpg_folder\\風景\\P1000509.jpg",
+            ];
+
+                        let count = -1;
+
+                        jpgChange();
+
+                        function jpgChange()
+                        {
+
+                            count++;
+                            if (count == img.length) count = 0;
+                            pic.src = img[count];
+                            setTimeout("jpgChange()", 1000);
+                        }
+
+            </ script >
+            </ body >
+            </ html >
+
+                    };
+
+            */
+            try
+            {
+                //ファイルをオープンする
+                using (StreamWriter sw = new StreamWriter(fileName, false, Encoding.GetEncoding("utf-8")))
+                {
+                    string line;
+                    string file_c;
+                    line = "<!DOCTYPE html>\n"; sw.Write(line);
+
+                    line = "<html>\n"; sw.Write(line);
+
+                    line = "<head>\n"; sw.Write(line);
+
+                    line = "<title> 画像表示 </title>\n"; sw.Write(line);
+
+                    line = "</head>\n"; sw.Write(line);
+
+                    line = "<body>\n"; sw.Write(line);
+
+                    line = "<img id = \"pic\" src = \"\"  width = " + textBox14.Text + " height = " + textBox15.Text + " \" >\n"; sw.Write(line);
+
+
+
+                    line = "<script>\n"; sw.Write(line);
+
+                    line = "const img = [\n"; sw.Write(line);
+
+                    foreach (var file in files)
+                    {
+                        file_c = file.Replace(@"\", "\\\\");
+
+                        line = "\"" + file_c + "\"" + ",\n"; sw.Write(line);
+                    }
+
+                    line = "];\n"; sw.Write(line);
+
+                    line = "let count = -1;\n"; sw.Write(line);
+
+                    line = "jpgChange();\n"; sw.Write(line);
+
+                    line = "function jpgChange()\n"; sw.Write(line);
+                    line = "{\n"; sw.Write(line);
+
+                    line = "count++;\n"; sw.Write(line);
+                    line = "if (count == img.length) count = 0;\n"; sw.Write(line);
+                    line = "pic.src = img[count];\n"; sw.Write(line);
+                    line = "setTimeout(\"jpgChange()\"," + textBox12.Text + ");\n"; sw.Write(line);
+                    line = "}\n"; sw.Write(line);
+
+                    line = "</script>\n"; sw.Write(line);
+                    line = "</body>\n"; sw.Write(line);
+                    line = "</html>\n"; sw.Write(line);
+
+
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+
+
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -537,6 +665,15 @@ namespace jpg_view_folder
             System.Diagnostics.Process.Start(@"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe",
                     "C:\\html_link\\test.html");
 
+
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            Writehtml3(files);
+
+            System.Diagnostics.Process.Start(@"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe",
+                    "C:\\html_link\\test3.html");
 
         }
     }
